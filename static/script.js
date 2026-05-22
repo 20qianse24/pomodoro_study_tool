@@ -5,7 +5,7 @@
 // --- Initial State ---
 let state = {
     settings: {
-        study: 25,
+        study: 50,
         short: 5,
         long: 15
     },
