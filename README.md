@@ -1,4 +1,4 @@
-# StudyFix Pomodoro
+# StudyFix Pomodoro - Now LIVE!
 
 ## Features:
 - Set custom study and break lengths
