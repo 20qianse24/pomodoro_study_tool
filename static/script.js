@@ -282,6 +282,12 @@ function selectTask(id) {
 
 function updateCurrentTask() {
     if (!currentTaskDisplay) return;
+    const isBreakRunning = state.isRunning && (state.currentMode === 'short' || state.currentMode === 'long');
+    if (isBreakRunning) {
+        currentTaskDisplay.textContent = 'Recharging...';
+        return;
+    }
+
     const selectedTask = state.tasks.find(t => t.id === state.selectedTaskId);
     currentTaskDisplay.textContent = selectedTask ? selectedTask.description : 'No task selected';
 }
