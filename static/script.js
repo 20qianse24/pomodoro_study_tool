@@ -10,7 +10,7 @@ let state = {
         long: 15
     },
     currentMode: 'study', // 'study' | 'short' | 'long'
-    timeLeft: 25 * 60,
+    timeLeft: 50 * 60,
     isRunning: false,
     timerInterval: null,
     tasks: [],
@@ -98,6 +98,7 @@ function startTimer() {
         if (state.timeLeft > 0) {
             state.timeLeft--;
             timerDisplay.textContent = formatTime(state.timeLeft);
+            updateCurrentTask();
         } else {
             clearInterval(state.timerInterval);
             state.isRunning = false;
